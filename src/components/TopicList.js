@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react'
-import TopiclistRow from './TopiclistRow'
+import TopicListRow from './TopicListRow'
 import TopicCreate from './TopicCreate'
 
 var _renderTopicListRow = (list, thumbUp, thumbDown )=> {
     return list.map((_topic, index)=>{
-        return (<TopiclistRow 
+        return (<TopicListRow 
                   key={index} 
                   topic={_topic} 
                   thumbUp={thumbUp} 
