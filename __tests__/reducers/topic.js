@@ -1,22 +1,22 @@
 
-import { createStore } from 'redux'
-import topicReducer from '../../src/reducers/topic.js'
+import { createStore, combineReducers } from 'redux'
+import topic from '../../src/reducers/topic.js'
 import {
   SET_TOPCIS
 } from '../../src/config/actionType'
 
-let store = createStore(topicReducer, {})
+let store = createStore(combineReducers({topic}), {})
 
 describe('github reducer', () => {
   it('should return the initial state', (done) => {
-    const _products = [{a: 'a'}];
+    const _json = [{a: 'a'}];
 
     store.dispatch({
         type: 'SET_TOPCIS',
-        topic: _products
+        list: _json
     });    
 
-    expect(store.getState().topic).toBe(_products)
+    expect(store.getState().topic.list).toBe(_json)
     done()
   })
 })

@@ -4,7 +4,6 @@ const topicActionCreator = {
   createTopic : (_topic) => {
     return (dispatch, getState) => {
       let topicList = getState().topics.list
-
       const _createTopic = content => {return{
         content,
         id : topicList.length +1,
