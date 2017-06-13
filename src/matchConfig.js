@@ -2,6 +2,7 @@
 import HelloWorld from './containers/HelloWorld'
 import PreloadHelloWorld from './containers/PreloadHelloWorld'
 import JsonAPI from './containers/JsonAPI'
+import TopicList from './containers/TopicList'
 
 const matchConfig = [
   {
@@ -13,6 +14,11 @@ const matchConfig = [
     path: '/preload',
     component: PreloadHelloWorld,
     initState: PreloadHelloWorld.initState
+  },
+  {
+    path: '/topics',
+    component: TopicList,
+    initState: TopicList.initState,
   },
   {
     path: '/',
