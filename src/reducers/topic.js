@@ -25,13 +25,14 @@ const INIT_STATE = [
                     }
                 ];
 
-const apiReducer = (state = {list: INIT_STATE}, action) => {
+const topicReducer = (state = {topic: INIT_STATE}, action) => {
   switch (action.type) {
-    case SET_TOPCIS:
-      return Object.assign({}, state, { list: action.list })
+    case SET_TOPCIS:{
+      return Object.assign({}, state, { topic: action.topic })
+    }
     default:
       return state
   }
 }
 
-export default apiReducer
+export default topicReducer

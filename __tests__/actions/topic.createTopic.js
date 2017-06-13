@@ -17,23 +17,26 @@ describe('api action creator', () => {
                     }
     const expectedActions = [{ 
                               type: SET_TOPCIS, 
-                              topic: {
-                                  content: '2- list 2',
-                                  id : 2,
-                                  vote : 0
-                              } 
+                              topic: [{
+                                          id: 1,
+                                          content: '1- list 1',
+                                          vote: 99
+                                      },{
+                                          content: '2- list 2',
+                                          id : 2,
+                                          vote : 0
+                                      }]
                             }]
+
 
     const store = mockStore(initData)
     store.dispatch(topicActionCreator.createTopic(mockData))
-    
     expect(store.getActions()).toEqual(expectedActions)
     done()
         
   }, 5000)
 
-
-  it('Create null topic', (done) => {
+  it('Create null topic -1', (done) => {
     var initData = [{
                         id: 1,
                         content: '1- list 1',
@@ -49,5 +52,19 @@ describe('api action creator', () => {
     expect(store.getActions()).toEqual([])
     done()
         
+  }, 5000)
+  
+  it('Create null topic -2', (done) => {
+    var initData = [{
+                        id: 1,
+                        content: '1- list 1',
+                        vote: 99
+                    }]
+    var mockData = {}
+
+    const store = mockStore(initData)
+    store.dispatch(topicActionCreator.createTopic(mockData))
+    expect(store.getActions()).toEqual([])
+    done()
   }, 5000)
 })
