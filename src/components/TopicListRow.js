@@ -5,10 +5,10 @@ class TopicListRow extends React.Component {
     const { topic, thumbUp, thumbDown } = this.props
 
     const _thumbUp = () => {
-      return thumbUp(topic.id)
+      thumbUp(topic.id)
     }
     const _thumbDown = () => {
-      return thumbDown(topic.id)
+      thumbDown(topic.id)
     }
 
     return (<div>

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-class TopicListRow extends React.Component {
+class TopicCreate extends React.Component {
    constructor(props) {
       super(props);
       this.state = {
@@ -45,8 +45,8 @@ class TopicListRow extends React.Component {
   }
 }
 
-TopicListRow.propTypes = {
+TopicCreate.propTypes = {
   createTopic: PropTypes.func.isRequired,
 }
 
-export default TopicListRow
+export default TopicCreate
