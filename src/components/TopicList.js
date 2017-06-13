@@ -18,7 +18,6 @@ class TopicList extends React.Component {
 
   render() {
     const { list, thumbUp, thumbDown, createTopic} = this.props
-
     return (<div>
               <h1> Create </h1>
               <TopicCreate createTopic={createTopic}/>

@@ -4,7 +4,7 @@ const topicActionCreator = {
   createTopic : (_topic) => {
     return (dispatch, getState) => {
 
-      let topicList = getState()
+      let topicList = getState().topics.list
 
       const _createTopic = content => {return{
         content,
@@ -16,13 +16,13 @@ const topicActionCreator = {
               null : 
               dispatch({
                 type: SET_TOPCIS,
-                topic: topicList.concat(_createTopic(_topic.content))
+                list: topicList.concat(_createTopic(_topic.content))
               })
     }
   },
   thumbUp : (_id) => {
     return (dispatch, getState) => {
-      let topicList = getState()
+      let topicList = getState().topics.list
       topicList.forEach( topic => (topic.id === _id) ? topic.vote +=1 : null)
       return dispatch({
                 type: SET_TOPCIS,
@@ -32,7 +32,7 @@ const topicActionCreator = {
   },
   thumbDown : (_id) => {
     return (dispatch, getState) => {
-      let topicList = getState()
+      let topicList = getState().topics.list
       topicList.forEach( topic => (topic.id === _id) ? topic.vote -=1 : null)
       return dispatch({
                 type: SET_TOPCIS,

@@ -24,7 +24,7 @@ class TopicListRow extends React.Component {
 
     const _createTopic = () => {
         createTopic(data)
-        updateStateData('')
+        this.updateStateData('')
     }
 
     return (<div>
