@@ -1,0 +1,30 @@
+.formRow {
+    display: flex;
+    min-height: 30px;
+    position: relative;
+    margin: 30px;
+    border: solid 1px orange;
+    padding: 10px;
+}
+
+.rowName {
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.rowVote {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+.rowThumbUp {
+    float: left;
+    width: 10%;
+    height: 100%;
+}
+.rowThumbDown {
+    float: left;
+    width: 10%;
+    height: 100%;
+}

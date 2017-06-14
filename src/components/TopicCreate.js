@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react'
+import style from './TopicCreate.css'
+import classNames from 'classnames'
 
 class TopicCreate extends React.Component {
    constructor(props) {
@@ -27,9 +29,10 @@ class TopicCreate extends React.Component {
         this.updateStateData('')
     }
 
-    return (<div>
-            <label>
-                content
+    return (<div  className={classNames(style['blockDiv'])}>
+            <h1> Create </h1>
+            <label  className={classNames(style['forLabel'])}>
+                Content
             </label>
             <input 
                 required
@@ -37,10 +40,7 @@ class TopicCreate extends React.Component {
                 value={data}  
                 type="text"
                 placeholder="your  content"/> 
-            <button onClick={_createTopic}> Add</button>
-            <span>
-                {this.state.data}
-            </span>
+            <button  className={classNames(style['createButton'])} onClick={_createTopic}> Add</button>
         </div>)
   }
 }

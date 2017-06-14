@@ -10,7 +10,6 @@ describe('api action creator', () => {
     var _id = 2
     var _vote = 4
 
-
     var initData = {topics: {
                         list: [{
                             id: 1,

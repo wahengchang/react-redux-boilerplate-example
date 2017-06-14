@@ -1,4 +1,6 @@
 import React, { PropTypes } from 'react'
+import style from './TopicListRow.css'
+import classNames from 'classnames'
 
 class TopicListRow extends React.Component {
   render() {
@@ -11,13 +13,13 @@ class TopicListRow extends React.Component {
       thumbDown(topic.id)
     }
 
-    return (<div>
-              <div><span> {topic.content}</span> </div>
-              <div><p> {topic.vote}</p> </div>
-              <div>
+    return (<div className={classNames(style['formRow'])}>
+              <div className={classNames(style['rowName'])}><span> {topic.content}</span> </div>
+              <div className={classNames(style['rowVote'])}><span> {topic.vote}</span> </div>
+              <div className={classNames(style['rowThumbUp'])}>
                   <button onClick={_thumbUp}> Like </button>
               </div>
-              <div> 
+              <div className={classNames(style['rowThumbDown'])}> 
                   <button onClick={_thumbDown}> Dislike</button>
               </div>
           </div>)

@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
 import TopicListRow from './TopicListRow'
 import TopicCreate from './TopicCreate'
+import style from './TopicList.css'
+import classNames from 'classnames'
 
 var _renderTopicListRow = (list, thumbUp, thumbDown )=> {
     return list.map((_topic, index)=>{
@@ -19,10 +21,12 @@ class TopicList extends React.Component {
   render() {
     const { list, thumbUp, thumbDown, createTopic} = this.props
     return (<div>
-              <h1> Create </h1>
               <TopicCreate createTopic={createTopic}/>
-              <h1 >TopicList</h1>
-              {_renderTopicListRow(list, thumbUp, thumbDown )}
+
+              <div className={classNames(style['blockDiv'])}>
+                <h1 className={classNames(style['testcss'])} >TopicList</h1>
+                {_renderTopicListRow(list, thumbUp, thumbDown )}
+              </div>
             </div>)
   }
 }
