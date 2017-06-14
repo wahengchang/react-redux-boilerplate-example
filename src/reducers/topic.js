@@ -5,23 +5,18 @@ import {
 const INIT_STATE = [
                     {
                         id: 1,
-                        content: '1- list 1',
-                        vote: 99
+                        content: 'Peter is the best',
+                        vote: 5
                     },
                     {
                         id: 2,
-                        content: 'list 2',
-                        vote: 1
+                        content: 'Charlotte is good',
+                        vote: 2
                     },
                     {
                         id: 3,
-                        content: 'list 3',
+                        content: 'Others is ok',
                         vote: 1
-                    },
-                    {
-                        id: 4,
-                        content: '4 llllist 2',
-                        vote: 2
                     }
                 ];
 

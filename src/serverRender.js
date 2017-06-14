@@ -62,7 +62,7 @@ function renderFullPage(html, preloadedState) {
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Redux Hello World</title>
+        <title>Title: Digg / Reddit clone with upvote and downvotes</title>
         <link rel="stylesheet" type="text/css" href="/static/bundle.css">
       </head>
       <body>

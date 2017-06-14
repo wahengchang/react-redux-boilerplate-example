@@ -6,7 +6,8 @@ class TopicCreate extends React.Component {
    constructor(props) {
       super(props);
       this.state = {
-         data: 'Initial data...'
+         data: 'Initial data...',
+         isTooLong: false
       }
       this.updateStateData = this.updateStateData.bind(this);
    };
@@ -17,16 +18,25 @@ class TopicCreate extends React.Component {
 
   render() {
     const { createTopic } = this.props
-    let { data } = this.state
+    let { data, isTooLong } = this.state
     
     const onChange = (e) => {
-        console.log('e.target.value: ', e.target.value);
-        this.updateStateData( e.target.value)
+        // console.log('e.target.value: ', e.target.value);
+        console.log('e.target.value.length: ', e.target.value.length);
+
+        if(e.target.value.length >= 255) {
+            this.setState({isTooLong: true})
+        } else {
+            this.setState({isTooLong: false})
+            this.updateStateData( e.target.value)
+        }
     }
 
     const _createTopic = () => {
-        createTopic(data)
-        this.updateStateData('')
+        if(!isTooLong) {
+            createTopic(data)
+            this.updateStateData('')
+        }
     }
 
     return (<div  className={classNames(style['blockDiv'])}>
@@ -35,12 +45,15 @@ class TopicCreate extends React.Component {
                 Content
             </label>
             <input 
+                className={ (!isTooLong)? '' : classNames(style['errorField'])} 
                 required
                 onChange={onChange}  
                 value={data}  
                 type="text"
                 placeholder="your  content"/> 
-            <button  className={classNames(style['createButton'])} onClick={_createTopic}> Add</button>
+            <button  disabled={isTooLong} className={classNames(style['createButton'])} onClick={_createTopic}> Add</button>
+
+            { (!isTooLong)? '' : <span className={classNames(style['errorMessage'])}> Should shorter than 255 characters </span>}
         </div>)
   }
 }
