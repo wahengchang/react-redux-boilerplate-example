@@ -5,17 +5,17 @@ import {
 const INIT_STATE = [
                     {
                         id: 1,
-                        content: 'Peter is the best',
+                        content: 'I like eating rice',
                         vote: 5
                     },
                     {
                         id: 2,
-                        content: 'Charlotte is good',
+                        content: 'It is a joke',
                         vote: 2
                     },
                     {
                         id: 3,
-                        content: 'Others is ok',
+                        content: 'Charlotte likes noodle',
                         vote: 1
                     }
                 ];
