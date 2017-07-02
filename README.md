@@ -6,9 +6,9 @@ As the graph showed below, container components takes the role of centralize the
  - redux(dispather, middlewares, store and actinos)
 
 
-![react-redux-universial-container-compont](https://user-images.githubusercontent.com/5538753/27766783-2d52c77a-5f0f-11e7-9644-e640dbe06cc1.jpg)
+![react-redux-universial-container-compont](https://user-images.githubusercontent.com/5538753/27771266-2af87dde-5f7e-11e7-9c7c-ec92b57643aa.jpg)
 
-
+## Download the project
 ```
 $ git clone https://github.com/wahengchang/react-redux-boilerplate-example
 $ npm install
@@ -50,14 +50,8 @@ or watch mode
 $ ./node_modules/jest/bin/jest.js --watchAll #runs all tests
 ```
 
-
-## Page
- - / (20topics, sorted by upvotes, descending)
- - /:id
- - /create
-
+ 
 #### Remark
- - Title: Digg / Reddit clone with upvote and downvotes
  - post not exceed 255 characters
 
 #### Data Structure
