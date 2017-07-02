@@ -1,4 +1,13 @@
 # react-redux-boilerplate-example
+It is a example of demonstrating how isomorphic web application works under [facebook-react-redux-application-standard](https://facebook.github.io/react/) architect. 
+
+As the graph showed below, container components takes the role of centralize the mechanism of isomorphic shared componetns, wiring up :
+ - react(router, containers, componets, props and server-client-rendering)
+ - redux(dispather, middlewares, store and actinos)
+
+
+![react-redux-universial-container-compont](https://user-images.githubusercontent.com/5538753/27766783-2d52c77a-5f0f-11e7-9644-e640dbe06cc1.jpg)
+
 
 ```
 $ git clone https://github.com/wahengchang/react-redux-boilerplate-example
