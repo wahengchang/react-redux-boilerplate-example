@@ -64,4 +64,5 @@ $ ./node_modules/jest/bin/jest.js --watchAll #runs all tests
  ```
 
 ## Reference
-[https://github.com/wahengchang/react-redux-boilerplate](https://github.com/wahengchang/react-redux-boilerplate)
+ - [https://github.com/wahengchang/react-redux-boilerplate](https://github.com/wahengchang/react-redux-boilerplate)
+ - [https://medium.com/@peterchang_82818/react-redux-isomorphic-boilerplate-best-practice-example-tutorial-learning-rendering-reducer-action-8a448d0dbddb](https://medium.com/@peterchang_82818/react-redux-isomorphic-boilerplate-best-practice-example-tutorial-learning-rendering-reducer-action-8a448d0dbddb)
