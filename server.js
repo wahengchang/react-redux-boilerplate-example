@@ -2,7 +2,7 @@
 require('babel-register');
 
 var app = new (require('express'))()
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 4000
 
 require('css-modules-require-hook')({
   generateScopedName: '[name]__[local]___[hash:base64:5]'

@@ -5,13 +5,11 @@ import style from './TopicList.css'
 import classNames from 'classnames'
 
 var _renderTopicListRow = (list, thumbUp, thumbDown )=> {
-
-
     list.sort(function (a, b) {
       return b.vote - a.vote;
     });
 
-    return list.map((_topic, index)=>{
+    return list.slice(0, 19).map((_topic, index)=>{
         return (<TopicListRow 
                   key={index} 
                   topic={_topic} 
